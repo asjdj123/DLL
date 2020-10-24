@@ -1,0 +1,105 @@
+›“¿ À≈ÿ¿ Õ≈ ƒ¬À
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp2
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        int a, b, c;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            a = int.Parse(textBox1.Text);
+            c = 1;
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            a = int.Parse(textBox1.Text);
+            c = 2;
+
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            a = int.Parse(textBox1.Text);
+            c = 3;
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            a = int.Parse(textBox1.Text);
+            c = 4;
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Class1 class1 = new Class1();
+            b = int.Parse(textBox1.Text);
+            if (c == 1)
+            {
+                textBox1.Text = class1.add(a, b).ToString();
+            }
+           else if (c == 2)
+            {
+                textBox1.Text = class1.minus(a, b).ToString();
+            }
+            else if (c == 3)
+            {
+                textBox1.Text = class1.ass(a, b).ToString();
+            }
+           else if (c == 4)
+            {
+                textBox1.Text = class1.umnojit(a, b).ToString();
+            }
+        }
+    }
+}
+  
+
+
+¿ ›“¿ ƒ¬À À≈ÿ¿ œŒÕ»Ã¿≈ÿ‹?
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+public class Class1
+{
+    public int add(int a, int b)
+    {
+        return a + b;
+    }
+
+    public int minus(int a, int b)
+    {
+        return a - b;
+}
+
+    public int ass(int a, int b)
+{
+    return a / b;
+}
+
+    public int umnojit(int a, int b)
+{
+    return a * b;
+}
+}
